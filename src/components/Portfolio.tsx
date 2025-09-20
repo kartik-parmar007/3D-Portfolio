@@ -3,7 +3,6 @@ import { ThemeProvider } from './ThemeProvider';
 import { Navigation } from './Navigation';
 import { HeroSection } from './HeroSection';
 import { AboutSection } from './AboutSection';
-import { Shape3DGallery } from './Shape3DGallery';
 import { ProjectsSection } from './ProjectsSection';
 import { ContactSection } from './ContactSection';
 import { Footer } from './Footer';
@@ -17,7 +16,6 @@ export const Portfolio: React.FC = () => {
         <main>
           <HeroSection />
           <AboutSection />
-          <Shape3DGallery />
           <ProjectsSection />
           <ContactSection />
         </main>

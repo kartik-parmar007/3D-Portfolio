@@ -2,7 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Modern Portfolio Design System - Kartik Parmar */
+/* TechSculptor Portfolio Design System - Kartik Parmar */
+/* Custom design system built from scratch for professional portfolio */
+/* Mobile-First Responsive Design */
 
 @layer base {
   :root {
@@ -81,17 +83,32 @@
     background: linear-gradient(135deg, hsl(var(--background)), hsl(var(--gradient-start) / 0.1));
   }
 
+  /* Enhanced Glass Effect for Mobile */
   .glass-effect {
     background: hsl(var(--glass-bg) / 0.8);
     backdrop-filter: blur(20px);
     border: 1px solid hsl(var(--glass-border));
   }
+  
+  @media (max-width: 640px) {
+    .glass-effect {
+      backdrop-filter: blur(10px);
+    }
+  }
 
   /* Custom animations */
+  /* Responsive Animations */
   .hero-glow {
     box-shadow: 0 0 40px hsl(var(--hero-glow) / 0.3);
   }
+  
+  @media (max-width: 640px) {
+    .hero-glow {
+      box-shadow: 0 0 20px hsl(var(--hero-glow) / 0.2);
+    }
+  }
 
+  /* Responsive Card Hover Effects */
   .card-hover {
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
@@ -100,15 +117,43 @@
     transform: translateY(-8px);
     box-shadow: 0 20px 40px hsl(var(--card-shadow) / 0.3);
   }
+  
+  @media (max-width: 768px) {
+    .card-hover:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 20px hsl(var(--card-shadow) / 0.2);
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .card-hover:hover {
+      transform: none;
+      box-shadow: 0 5px 15px hsl(var(--card-shadow) / 0.1);
+    }
+  }
 
   /* 3D Shape Styles */
+  /* Responsive 3D Shape Styles */
   .shape-container-3d {
     perspective: 1200px;
   }
+  
+  @media (max-width: 768px) {
+    .shape-container-3d {
+      perspective: 800px;
+    }
+  }
 
+  /* Responsive Cube Animation */
   .cube-3d {
     animation: cube-float 6s ease-in-out infinite;
     transform-style: preserve-3d;
+  }
+  
+  @media (max-width: 640px) {
+    .cube-3d {
+      animation: cube-float-mobile 8s ease-in-out infinite;
+    }
   }
 
   .cube-face {
@@ -188,10 +233,31 @@
     border-radius: 50%;
   }
 
-  /* Enhanced Animations */
+  /* Enhanced Animations with Mobile Support */
   @keyframes cube-float {
     0%, 100% { transform: translateY(0px) rotateX(15deg) rotateY(15deg); }
     50% { transform: translateY(-20px) rotateX(15deg) rotateY(15deg); }
+  }
+  
+  @keyframes cube-float-mobile {
+    0%, 100% { transform: translateY(0px) rotateX(10deg) rotateY(10deg); }
+    50% { transform: translateY(-10px) rotateX(10deg) rotateY(10deg); }
+  }
+  
+  /* Smooth scroll behavior */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Mobile touch improvements */
+  @media (max-width: 768px) {
+    * {
+      -webkit-tap-highlight-color: transparent;
+    }
+    
+    button, a {
+      touch-action: manipulation;
+    }
   }
 }
 

@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 200 200" fill="none">
+  <defs>
+    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00D4FF;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#3B82F6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8B5CF6;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="kpGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00FFFF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FF00FF;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Diamond frame -->
+  <g transform="translate(100, 100) rotate(45)">
+    <!-- Outer diamond -->
+    <rect x="-60" y="-60" width="120" height="120" fill="none" stroke="url(#logoGradient)" stroke-width="4" rx="8"/>
+    <!-- Inner diamond -->
+    <rect x="-45" y="-45" width="90" height="90" fill="none" stroke="url(#logoGradient)" stroke-width="3" rx="6"/>
+    <!-- Innermost diamond -->
+    <rect x="-30" y="-30" width="60" height="60" fill="none" stroke="url(#logoGradient)" stroke-width="2" rx="4"/>
+  </g>
+  
+  <!-- KP Letters -->
+  <g transform="translate(100, 100)">
+    <!-- K -->
+    <g transform="translate(-25, 0)">
+      <path d="M-15,-25 L-15,25 M-15,0 L10,-25 M-15,0 L10,25" 
+            stroke="url(#kpGradient)" 
+            stroke-width="6" 
+            stroke-linecap="round" 
+            stroke-linejoin="round" 
+            fill="none"/>
+    </g>
+    
+    <!-- P -->
+    <g transform="translate(15, 0)">
+      <path d="M-10,-25 L-10,25 M-10,-25 L10,-25 Q20,-25 20,-10 Q20,5 10,5 L-10,5" 
+            stroke="url(#kpGradient)" 
+            stroke-width="6" 
+            stroke-linecap="round" 
+            stroke-linejoin="round" 
+            fill="none"/>
+    </g>
+  </g>
+</svg>

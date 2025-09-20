@@ -1,42 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Phone, Send, MapPin, Github, Linkedin } from 'lucide-react';
+import { Mail, MapPin, Github, Linkedin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { useToast } from '@/hooks/use-toast';
+import { Card, CardContent } from '@/components/ui/card';
 
 export const ContactSection: React.FC = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const { toast } = useToast();
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData(prev => ({
-      ...prev,
-      [e.target.name]: e.target.value
-    }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    // Simulate form submission
-    setTimeout(() => {
-      toast({
-        title: "Message sent!",
-        description: "Thank you for reaching out. I'll get back to you soon.",
-      });
-      setFormData({ name: '', email: '', message: '' });
-      setIsSubmitting(false);
-    }, 1000);
-  };
 
   const contactInfo = [
     {
@@ -46,15 +14,9 @@ export const ContactSection: React.FC = () => {
       href: 'mailto:kartik.parmar.dev@gmail.com'
     },
     {
-      icon: Phone,
-      label: 'Phone',
-      value: '+91 98765 43210',
-      href: 'tel:+919876543210'
-    },
-    {
       icon: MapPin,
       label: 'Location',
-      value: 'India',
+      value: 'Gujarat',
       href: null
     }
   ];
@@ -73,163 +35,104 @@ export const ContactSection: React.FC = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 relative">
-      <div className="container mx-auto px-4">
+    <section id="contact" className="py-12 sm:py-16 md:py-20 relative">
+      <div className="container mx-auto px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-12 md:mb-16"
         >
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 md:mb-6">
             Get In <span className="gradient-primary bg-clip-text text-transparent">Touch</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Have a project in mind or want to collaborate? I'd love to hear from you. 
-            Let's create something amazing together!
+          <p className="text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto px-4">
+            Ready to collaborate or discuss opportunities? Let's connect and create something amazing together!
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="max-w-4xl mx-auto">
           {/* Contact Information */}
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
-            className="space-y-8"
+            className="text-center mb-8 md:mb-12"
           >
-            <div>
-              <h3 className="text-2xl font-semibold mb-6">Let's Connect</h3>
-              <p className="text-muted-foreground mb-8 leading-relaxed">
-                I'm always open to discussing new opportunities, interesting projects, 
-                or just having a chat about technology and development.
-              </p>
-            </div>
-
-            <div className="space-y-4">
-              {contactInfo.map((item, index) => (
-                <motion.div
-                  key={item.label}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                >
-                  <Card className="glass-effect border-0 hover:bg-accent/5 transition-all duration-300">
-                    <CardContent className="p-4">
-                      <div className="flex items-center space-x-4">
-                        <div className="p-3 rounded-lg bg-gradient-to-br from-accent/20 to-accent/10">
-                          <item.icon className="h-5 w-5 text-accent" />
-                        </div>
-                        <div>
-                          <p className="font-medium">{item.label}</p>
-                          {item.href ? (
-                            <a 
-                              href={item.href}
-                              className="text-muted-foreground hover:text-accent transition-colors"
-                            >
-                              {item.value}
-                            </a>
-                          ) : (
-                            <p className="text-muted-foreground">{item.value}</p>
-                          )}
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </motion.div>
-              ))}
-            </div>
-
-            <div>
-              <h4 className="font-semibold mb-4">Follow Me</h4>
-              <div className="flex gap-4">
-                {socialLinks.map((social) => (
-                  <Button
-                    key={social.label}
-                    variant="outline"
-                    size="icon"
-                    className="glass-effect border-0 hover:bg-accent/20"
-                    asChild
-                  >
-                    <a
-                      href={social.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label={social.label}
-                    >
-                      <social.icon className="h-5 w-5" />
-                    </a>
-                  </Button>
-                ))}
-              </div>
-            </div>
+            <h3 className="text-xl sm:text-2xl font-semibold mb-4 md:mb-6">Let's Connect</h3>
+            <p className="text-sm sm:text-base text-muted-foreground mb-8 md:mb-12 leading-relaxed px-4 max-w-2xl mx-auto">
+              I'm always open to discussing new opportunities, interesting projects, 
+              or just having a chat about technology and development.
+            </p>
           </motion.div>
 
-          {/* Contact Form */}
+          {/* Contact Cards Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 mb-8 md:mb-12">
+            {contactInfo.map((item, index) => (
+              <motion.div
+                key={item.label}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <Card className="glass-effect border-0 hover:bg-accent/5 transition-all duration-300 h-full">
+                  <CardContent className="p-4 sm:p-6 text-center">
+                    <div className="flex flex-col items-center space-y-3">
+                      <div className="p-3 sm:p-4 rounded-xl bg-gradient-to-br from-accent/20 to-accent/10">
+                        <item.icon className="h-5 w-5 sm:h-6 sm:w-6 text-accent" />
+                      </div>
+                      <div>
+                        <p className="font-medium text-sm sm:text-base mb-1">{item.label}</p>
+                        {item.href ? (
+                          <a 
+                            href={item.href}
+                            className="text-xs sm:text-sm text-muted-foreground hover:text-accent transition-colors break-all"
+                          >
+                            {item.value}
+                          </a>
+                        ) : (
+                          <p className="text-xs sm:text-sm text-muted-foreground">{item.value}</p>
+                        )}
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Social Links */}
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
             viewport={{ once: true }}
+            className="text-center"
           >
-            <Card className="glass-effect border-0">
-              <CardHeader>
-                <CardTitle>Send Me a Message</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div>
-                    <Input
-                      name="name"
-                      placeholder="Your Name"
-                      value={formData.name}
-                      onChange={handleInputChange}
-                      required
-                      className="bg-transparent border-accent/20 focus:border-accent"
-                    />
-                  </div>
-                  <div>
-                    <Input
-                      name="email"
-                      type="email"
-                      placeholder="Your Email"
-                      value={formData.email}
-                      onChange={handleInputChange}
-                      required
-                      className="bg-transparent border-accent/20 focus:border-accent"
-                    />
-                  </div>
-                  <div>
-                    <Textarea
-                      name="message"
-                      placeholder="Your Message"
-                      value={formData.message}
-                      onChange={handleInputChange}
-                      required
-                      rows={5}
-                      className="bg-transparent border-accent/20 focus:border-accent resize-none"
-                    />
-                  </div>
-                  <Button
-                    type="submit"
-                    className="w-full gradient-primary"
-                    disabled={isSubmitting}
+            <h4 className="font-semibold mb-4 text-sm sm:text-base">Follow Me</h4>
+            <div className="flex justify-center gap-3 sm:gap-4">
+              {socialLinks.map((social) => (
+                <Button
+                  key={social.label}
+                  variant="outline"
+                  size="icon"
+                  className="glass-effect border-0 hover:bg-accent/20 h-10 w-10 sm:h-12 sm:w-12"
+                  asChild
+                >
+                  <a
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={social.label}
                   >
-                    {isSubmitting ? (
-                      'Sending...'
-                    ) : (
-                      <>
-                        <Send className="w-4 h-4 mr-2" />
-                        Send Message
-                      </>
-                    )}
-                  </Button>
-                </form>
-              </CardContent>
-            </Card>
+                    <social.icon className="h-4 w-4 sm:h-5 sm:w-5" />
+                  </a>
+                </Button>
+              ))}
+            </div>
           </motion.div>
         </div>
       </div>

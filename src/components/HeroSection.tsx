@@ -36,7 +36,7 @@ export const HeroSection: React.FC = () => {
                 👋
               </h1>
               <h2 className="text-2xl lg:text-3xl font-semibold text-muted-foreground mt-4">
-                MERN Stack Developer | Full-stack Engineer
+                MERN Stack Developer | Full-stack Engineer | Agentic AI Developer
               </h2>
             </motion.div>
 
@@ -46,8 +46,8 @@ export const HeroSection: React.FC = () => {
               transition={{ delay: 0.4, duration: 0.6 }}
               className="text-lg lg:text-xl text-muted-foreground max-w-2xl leading-relaxed"
             >
-              I build scalable web apps with MongoDB, Express, React, and Node. 
-              I emphasize clean UI, smooth animations, and performance.
+              I build scalable web apps with MongoDB, Express, React, and Node.js, while crafting intelligent 
+              AI agents and automation systems. I emphasize clean UI, smooth animations, and performance.
             </motion.p>
 
             <motion.div
@@ -123,7 +123,7 @@ export const HeroSection: React.FC = () => {
                 animate={{ y: [0, -20, 0] }}
                 transition={{ duration: 6, ease: "easeInOut", repeat: Infinity }}
               >
-                <Cube3D size={200} className="hero-glow" />
+                <Cube3D size={200} className="hero-glow" variant="cube" />
               </motion.div>
               
               {/* Floating particles */}

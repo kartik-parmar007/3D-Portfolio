@@ -11,6 +11,10 @@ const skills = [
   { name: 'Firebase', icon: Database, category: 'Backend' },
   { name: 'Vite', icon: Code, category: 'Tools' },
   { name: 'Next.js', icon: Smartphone, category: 'Framework' },
+  { name: 'OpenAI API', icon: Code, category: 'AI/ML' },
+  { name: 'LangChain', icon: Database, category: 'AI/ML' },
+  { name: 'AI Agents', icon: Globe, category: 'AI/ML' },
+  { name: 'Python', icon: Code, category: 'AI/ML' },
 ];
 
 export const AboutSection: React.FC = () => {
@@ -28,9 +32,9 @@ export const AboutSection: React.FC = () => {
             About <span className="gradient-primary bg-clip-text text-transparent">Me</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            I'm a passionate MERN Stack Developer with expertise in building modern, 
-            scalable web applications. I love creating seamless user experiences 
-            with clean code and beautiful interfaces.
+            I'm a passionate MERN Stack Developer and Agentic AI Developer with expertise in building modern, 
+            scalable web applications and intelligent automation systems. I love creating seamless user experiences 
+            with clean code, beautiful interfaces, and AI-powered solutions.
           </p>
         </motion.div>
 
@@ -46,13 +50,15 @@ export const AboutSection: React.FC = () => {
             <div className="glass-effect p-8 rounded-2xl">
               <h3 className="text-2xl font-semibold mb-4">My Journey</h3>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                With a strong foundation in full-stack development, I specialize in the MERN stack, 
-                creating dynamic and responsive web applications that deliver exceptional user experiences.
+                As a <strong className="text-primary">MERN Stack Developer</strong> and{' '}
+                <strong className="text-primary">Agentic AI Developer</strong>, I combine traditional 
+                web development expertise with cutting-edge AI technologies. I specialize in building 
+                intelligent automation systems, AI-powered web applications, and scalable full-stack solutions.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                I'm constantly learning new technologies and best practices to stay at the forefront 
-                of web development, ensuring that every project I work on meets modern standards 
-                for performance, accessibility, and user experience.
+                I'm constantly exploring new technologies in both web development and artificial intelligence, 
+                creating systems that can understand, reason, and act autonomously. From chatbots and virtual 
+                assistants to complex workflow automation, I bridge the gap between human needs and AI capabilities.
               </p>
             </div>
           </motion.div>

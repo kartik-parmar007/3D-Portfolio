@@ -6,7 +6,7 @@ interface Cube3DProps {
   className?: string;
   variant?: 'cube' | 'sphere' | 'pyramid' | 'torus';
 }
-
+ 
 export const Cube3D: React.FC<Cube3DProps> = ({ 
   size = 100, 
   className = '', 

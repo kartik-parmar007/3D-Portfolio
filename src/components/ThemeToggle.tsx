@@ -5,37 +5,40 @@ import { useTheme } from './ThemeProvider';
 import { Button } from '@/components/ui/button';
 
 export const ThemeToggle: React.FC = () => {
-  const { theme, toggleTheme } = useTheme();
+  const { theme, effectiveTheme, toggleTheme, setTheme } = useTheme();
+
+  const handleToggle = () => {
+    // If currently using system preference, set to the opposite of the current effective theme
+    if (theme === 'system') {
+      setTheme(effectiveTheme === 'dark' ? 'light' : 'dark');
+    } else {
+      toggleTheme();
+    }
+  };
+
+  const isDark = theme === 'dark' || (theme === 'system' && effectiveTheme === 'dark');
 
   return (
     <Button
       variant="outline"
       size="icon"
-      onClick={toggleTheme}
-      className="relative glass-effect border-0 hover:bg-accent/20"
-      aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
+      onClick={handleToggle}
+      className="relative glass-effect border-0 hover:bg-accent/20 transition-all duration-300"
+      aria-label={`Switch to ${isDark ? 'light' : 'dark'} mode`}
     >
       <motion.div
-        initial={false}
-        animate={{ 
-          rotate: theme === 'dark' ? 0 : 180,
-          scale: theme === 'dark' ? 1 : 0 
-        }}
+        key={isDark ? 'dark' : 'light'}
+        initial={{ opacity: 0, rotate: isDark ? 90 : -90 }}
+        animate={{ opacity: 1, rotate: 0 }}
+        exit={{ opacity: 0, rotate: isDark ? -90 : 90 }}
         transition={{ duration: 0.3, ease: "easeInOut" }}
-        className="absolute"
+        className="absolute inset-0 flex items-center justify-center"
       >
-        <Moon className="h-4 w-4" />
-      </motion.div>
-      <motion.div
-        initial={false}
-        animate={{ 
-          rotate: theme === 'light' ? 0 : 180,
-          scale: theme === 'light' ? 1 : 0 
-        }}
-        transition={{ duration: 0.3, ease: "easeInOut" }}
-        className="absolute"
-      >
-        <Sun className="h-4 w-4" />
+        {isDark ? (
+          <Moon className="h-4 w-4" />
+        ) : (
+          <Sun className="h-4 w-4" />
+        )}
       </motion.div>
     </Button>
   );

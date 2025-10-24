@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Mail, MapPin, Github, Linkedin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
+import { ContactForm } from '@/components/ContactForm';
 
 export const ContactSection: React.FC = () => {
 
@@ -10,13 +11,13 @@ export const ContactSection: React.FC = () => {
     {
       icon: Mail,
       label: 'Email',
-      value: 'kartik.parmar.dev@gmail.com',
-      href: 'mailto:kartik.parmar.dev@gmail.com'
+      value: 'kartikparmar.dev@gmail.com',
+      href: 'mailto:kartikparmar.dev@gmail.com'
     },
     {
       icon: MapPin,
       label: 'Location',
-      value: 'Gujarat',
+      value: 'Gujarat,India',
       href: null
     }
   ];
@@ -104,13 +105,16 @@ export const ContactSection: React.FC = () => {
             ))}
           </div>
 
+          {/* Contact Form */}
+          <ContactForm />
+
           {/* Social Links */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
             viewport={{ once: true }}
-            className="text-center"
+            className="text-center mt-8 md:mt-12"
           >
             <h4 className="font-semibold mb-4 text-sm sm:text-base">Follow Me</h4>
             <div className="flex justify-center gap-3 sm:gap-4">

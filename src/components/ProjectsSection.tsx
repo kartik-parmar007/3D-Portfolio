@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ExternalLink, Github, X, Monitor, Globe, Database, Code, Server } from 'lucide-react';
+import { ExternalLink, Github, X, Monitor, Globe, Database, Code, Server, ShieldCheck, Wallet } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -8,18 +8,18 @@ import { Badge } from '@/components/ui/badge';
 const projects = [
   {
     id: 1,
-    title: 'Flash-2024',
-    description: 'A comprehensive MERN application for environmental reporting featuring geolocation services, file uploads, and real-time data management.',
-    longDescription: 'Flash-2024 is a full-stack web application built to help environmental organizations and activists report and track environmental issues. Features include user authentication, geolocation-based reporting, image and document uploads, admin dashboard, and real-time notifications.',
-    tech: ['React', 'Node.js', 'Express', 'MongoDB', 'Cloudinary', 'MapBox'],
-    github: 'https://github.com/kartik-parmar007/Flash-2024.git',
-    live: null,
-    image: '/flash-2024.svg',
-    gradient: 'from-green-500/20 to-emerald-500/20',
-    primaryColor: 'text-green-500',
-    icon: Globe,
-    featured: true
-  },
+  title: 'Public Grievance Reporting System',
+  description: 'A citizen-focused MERN web platform for submitting and tracking public grievances, ensuring transparency and quick resolution through digital governance.',
+  longDescription: 'The Public Grievance Reporting System is a full-stack MERN application designed to empower citizens to report issues directly to local authorities. It features user authentication, real-time complaint tracking, admin management dashboard, media uploads for proof submission, and status notifications. The platform aims to enhance public accountability and bridge the communication gap between citizens and government departments.',
+  tech: ['React', 'Node.js', 'Express', 'MongoDB', 'Firebase', 'Render'],
+  live: 'https://public-grievance-reporting-system.vercel.app/',
+  github: null,
+  image: '/public-grievance-reporting.svg',
+  gradient: 'from-blue-500/20 to-cyan-500/20',
+  primaryColor: 'text-blue-500',
+  icon: ShieldCheck,
+  // featured: true
+},
   {
     id: 2,
     title: 'S Kumar&CO.',
@@ -36,17 +36,17 @@ const projects = [
   },
   {
     id: 3,
-    title: 'Resume Analyzer and Job Finding',
-    description: 'Advanced MERN stack application with multiple API integrations for resume analysis and job matching functionality.',
-    longDescription: 'A comprehensive job search and resume optimization platform built with MERN stack. Features include AI-powered resume analysis, job matching algorithms, multiple API integrations for job listings, skill assessment, and personalized job recommendations based on resume content.',
-    tech: ['React', 'Node.js', 'Express', 'MongoDB', 'Multiple APIs', 'AI Integration'],
-    github: 'https://github.com/kartik-parmar007/Resume-Analyzer.git',
-    live: null,
-    image: '/resume-analyzer.svg',
-    gradient: 'from-purple-500/20 to-pink-500/20',
-    primaryColor: 'text-purple-500',
-    icon: Database,
-    featured: false
+  title: 'Expense Management System',
+  description: 'A smart MERN stack web application designed to track, manage, and analyze personal and business expenses efficiently.',
+  longDescription: 'The Expense Management System is a full-stack web platform that helps users manage their daily, monthly, and yearly expenses with ease. Built using the MERN stack, it offers features like user authentication, category-based spending analysis, visual expense reports, budget tracking, and cloud-synced data for access anywhere. The platform simplifies financial tracking and empowers users to make smarter financial decisions.',
+  tech: ['React', 'Node.js', 'Express', 'MongoDB', 'Chart.js', 'Firebase'],
+  live: 'https://expense-management-system-alpha.vercel.app/',
+  github: null,
+  image: '/expense-management.svg',
+  gradient: 'from-amber-500/20 to-orange-500/20',
+  primaryColor: 'text-amber-500',
+  icon: Wallet,
+  featured: false
   }
 ];
 

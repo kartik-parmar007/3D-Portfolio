@@ -19,7 +19,7 @@ export const Footer: React.FC = () => {
     },
     {
       icon: Mail,
-      href: 'mailto:kartik.parmar.dev@gmail.com',
+      href: 'mailto:kartikparmar.dev@gmail.com',
       label: 'Email'
     }
   ];

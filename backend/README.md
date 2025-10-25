@@ -2,6 +2,10 @@
 
 This is the backend API for the portfolio contact form, built with Node.js, Express, and MongoDB.
 
+## Deployed URL
+
+The backend is deployed at: https://threed-portfolio-2-u9hw.onrender.com
+
 ## Issue Fixed
 
 There was a deployment issue where the `ip-address` module (a dependency of mongoose) was missing its built distribution files, causing the error:

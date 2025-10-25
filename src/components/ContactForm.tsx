@@ -9,6 +9,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
 import { useToast } from '@/components/ui/use-toast';
+import { getApiUrl, API_ENDPOINTS } from '@/lib/api';
 
 // Define form schema with Zod
 const contactFormSchema = z.object({
@@ -39,7 +40,7 @@ export const ContactForm: React.FC = () => {
 
   const onSubmit = async (data: ContactFormData) => {
     try {
-      const response = await fetch('http://localhost:5001/api/contact', {
+      const response = await fetch(getApiUrl(API_ENDPOINTS.CONTACT), {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -54,10 +55,19 @@ export const ContactForm: React.FC = () => {
         });
         form.reset();
       } else {
-        const errorData = await response.json();
+        let errorMessage = 'Failed to send your message. Please try again.';
+        try {
+          const errorData = await response.json();
+          errorMessage = errorData.message || errorMessage;
+        } catch (e) {
+          // If server is down or returns HTML instead of JSON
+          if (response.status === 502) {
+            errorMessage = 'The server is temporarily unavailable. Please try again in a few minutes.';
+          }
+        }
         toast({
           title: 'Error',
-          description: errorData.message || 'Failed to send your message. Please try again.',
+          description: errorMessage,
           variant: 'destructive',
         });
       }

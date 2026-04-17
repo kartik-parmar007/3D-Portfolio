@@ -515,7 +515,7 @@ export const HeroSection: React.FC = () => {
               <div className="h-px w-5 bg-border" />
               <SocialBtn href="https://github.com/kartik-parmar007" icon={<Github className="w-4 h-4" />} label="GitHub" />
               <SocialBtn href="https://www.linkedin.com/in/kartik-parmar-/" icon={<Linkedin className="w-4 h-4" />} label="LinkedIn" />
-              <SocialBtn onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })} icon={<Mail className="w-4 h-4" />} label="Email Me" />
+              <SocialBtn href="mailto:kartik.parmar.dev@gmail.com" icon={<Mail className="w-4 h-4" />} label="Email Me" />
             </motion.div>
 
             {/* Stats */}

@@ -4,7 +4,6 @@ import { HeroSection } from './HeroSection';
 import { AboutSection } from './AboutSection';
 import { ExperienceSection } from './ExperienceSection';
 import { ProjectsSection } from './ProjectsSection';
-import { ContactSection } from './ContactSection';
 import { Footer } from './Footer';
 // import { ThemeTest } from './ThemeTest';
 // import { ThemePersistenceTest } from './ThemePersistenceTest';
@@ -19,7 +18,6 @@ export const Portfolio: React.FC = () => {
         <AboutSection />
         <ExperienceSection />
         <ProjectsSection />
-        <ContactSection />
         {/* 
         <div className="container mx-auto px-4 py-8">
           <ThemeTest />

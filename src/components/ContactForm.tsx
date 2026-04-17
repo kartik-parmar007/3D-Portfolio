@@ -9,7 +9,6 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
 import { useToast } from '@/components/ui/use-toast';
-import { getApiUrl, API_ENDPOINTS } from '@/lib/api';
 
 // Define form schema with Zod
 const contactFormSchema = z.object({
@@ -28,6 +27,10 @@ export type ContactFormData = z.infer<typeof contactFormSchema>;
 
 export const ContactForm: React.FC = () => {
   const { toast } = useToast();
+  const apiBaseUrl =
+    (import.meta.env.DEV ? import.meta.env.VITE_API_URL_DEV : import.meta.env.VITE_API_URL) ||
+    '';
+  const endpoint = `${apiBaseUrl.replace(/\/$/, '')}/api/send-email`;
   
   const form = useForm<ContactFormData>({
     resolver: zodResolver(contactFormSchema),
@@ -40,41 +43,36 @@ export const ContactForm: React.FC = () => {
 
   const onSubmit = async (data: ContactFormData) => {
     try {
-      const response = await fetch(getApiUrl(API_ENDPOINTS.CONTACT), {
+      const response = await fetch(endpoint, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(data),
       });
+      const contentType = response.headers.get('content-type') || '';
+      const isJsonResponse = contentType.includes('application/json');
+      const result = isJsonResponse ? await response.json() : await response.text();
 
-      if (response.ok) {
-        toast({
-          title: 'Success!',
-          description: 'Your message has been sent successfully.',
-        });
-        form.reset();
-      } else {
-        let errorMessage = 'Failed to send your message. Please try again.';
-        try {
-          const errorData = await response.json();
-          errorMessage = errorData.message || errorMessage;
-        } catch (e) {
-          // If server is down or returns HTML instead of JSON
-          if (response.status === 502) {
-            errorMessage = 'The server is temporarily unavailable. Please try again in a few minutes.';
-          }
-        }
-        toast({
-          title: 'Error',
-          description: errorMessage,
-          variant: 'destructive',
-        });
+      if (!response.ok) {
+        const errorMessage =
+          typeof result === 'object' && result !== null && 'error' in result
+            ? String((result as { error?: string }).error || 'Failed to send message')
+            : `Failed to send message (${response.status})`;
+        throw new Error(errorMessage);
       }
-    } catch (error) {
+
+      toast({
+        title: 'Success!',
+        description: 'Your message has been sent successfully.',
+      });
+      form.reset();
+    } catch (error: unknown) {
+      const errorMessage = error instanceof Error ? error.message : 'Failed to send your message. Please try again.';
+      console.error('Error sending email:', error);
       toast({
         title: 'Error',
-        description: 'Network error. Please check your connection and try again.',
+        description: errorMessage,
         variant: 'destructive',
       });
     }

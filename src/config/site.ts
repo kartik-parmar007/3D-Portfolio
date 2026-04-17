@@ -37,14 +37,6 @@ export const SITE_CONFIG = {
     resumeAnalyzer: 'https://github.com/kartik-parmar007/Resume-Analyzer.git'
   },
   
-  // Backend API configuration
-  api: {
-    baseUrl: 'https://threed-portfolio-2-u9hw.onrender.com',
-    endpoints: {
-      contact: '/api/contact'
-    }
-  },
-  
   // Theme configuration
   theme: {
     defaultMode: 'dark',

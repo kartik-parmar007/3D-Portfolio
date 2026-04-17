@@ -2,6 +2,7 @@ import React from 'react';
 import { Navigation } from './Navigation';
 import { HeroSection } from './HeroSection';
 import { AboutSection } from './AboutSection';
+import { ExperienceSection } from './ExperienceSection';
 import { ProjectsSection } from './ProjectsSection';
 import { ContactSection } from './ContactSection';
 import { Footer } from './Footer';
@@ -16,6 +17,7 @@ export const Portfolio: React.FC = () => {
       <main>
         <HeroSection />
         <AboutSection />
+        <ExperienceSection />
         <ProjectsSection />
         <ContactSection />
         {/* 

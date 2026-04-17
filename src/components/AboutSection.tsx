@@ -3,18 +3,16 @@ import { motion } from 'framer-motion';
 import { Code, Database, Globe, Smartphone } from 'lucide-react';
 
 const skills = [
+  { name: 'Microservices', icon: Code, category: 'Architecture' },
+  { name: 'Cloudflare', icon: Globe, category: 'Edge Computing' },
+  { name: 'Docker', icon: Database, category: 'DevOps' },
   { name: 'React', icon: Code, category: 'Frontend' },
   { name: 'Node.js', icon: Database, category: 'Backend' },
-  { name: 'Express', icon: Globe, category: 'Backend' },
+  { name: 'NestJS', icon: Database, category: 'Backend Framework' },
   { name: 'MongoDB', icon: Database, category: 'Database' },
-  { name: 'TailwindCSS', icon: Code, category: 'Frontend' },
-  { name: 'Firebase', icon: Database, category: 'Backend' },
-  { name: 'Vite', icon: Code, category: 'Tools' },
   { name: 'Next.js', icon: Smartphone, category: 'Framework' },
   { name: 'n8n', icon: Code, category: 'Agentic AI' },
   { name: 'LangChain', icon: Database, category: 'Agentic AI' },
-  { name: 'AI Agents', icon: Globe, category: 'Agentic AI' },
-  { name: 'Python', icon: Code, category: 'Agentic AI' },
 ];
 
 export const AboutSection: React.FC = () => {
@@ -32,9 +30,7 @@ export const AboutSection: React.FC = () => {
             About <span className="gradient-primary bg-clip-text text-transparent">Me</span>
           </h2>
           <p className="text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed px-4">
-            I'm a passionate MERN Stack Developer and Agentic AI Developer with expertise in building modern, 
-            scalable web applications and intelligent automation systems. I love creating seamless user experiences 
-            with clean code, beautiful interfaces, and AI-powered solutions.
+            I am a Software Engineer and Distributed Systems Architect with expertise in building enterprise-grade, scalable applications. I engineer resilient digital platforms using Cloudflare, Microservices, and the MERN stack while integrating intelligent workflows through Agentic AI.
           </p>
         </motion.div>
 
@@ -50,15 +46,11 @@ export const AboutSection: React.FC = () => {
             <div className="glass-effect p-4 sm:p-6 md:p-8 rounded-2xl">
               <h3 className="text-xl sm:text-2xl font-semibold mb-3 md:mb-4">My Journey</h3>
               <p className="text-sm sm:text-base text-muted-foreground leading-relaxed mb-3 md:mb-4">
-                As a <strong className="text-primary">MERN Stack Developer</strong> and{' '}
-                <strong className="text-primary">Agentic AI Developer</strong>, I combine traditional 
-                web development expertise with cutting-edge AI technologies. I specialize in building 
-                intelligent automation systems, AI-powered web applications, and scalable full-stack solutions.
+                As a <strong className="text-primary">Systems Engineer</strong> and{' '}
+                <strong className="text-primary">Cloud Architect</strong>, I bridge the gap between traditional full-stack development and high-performance, globally distributed architectures. My focus is on fault tolerance, automated CI/CD pipelines, and writing highly performant backend services.
               </p>
               <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
-                I'm constantly exploring new technologies in both web development and artificial intelligence, 
-                creating systems that can understand, reason, and act autonomously. From chatbots and virtual 
-                assistants to complex workflow automation, I bridge the gap between human needs and AI capabilities.
+                By leveraging Cloudflare workers, modular Microservices, and Node.js frameworks like NestJS, I build systems capable of serving large user bases reliably. Beyond core web architectures, I pioneer Agentic AI solutions to automate complex business workflows, ensuring MNC-ready product delivery and maintenance.
               </p>
             </div>
           </motion.div>

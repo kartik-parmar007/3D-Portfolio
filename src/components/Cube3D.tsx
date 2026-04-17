@@ -55,7 +55,7 @@ export const Cube3D: React.FC<Cube3DProps> = ({
       {/* Cube faces with unique colors and content */}
       <div className="cube-face cube-front" style={{ width: size, height: size }}>
         <div className="flex items-center justify-center h-full text-sm font-bold text-primary-foreground">
-          REACT
+          Next.js
         </div>
       </div>
       <div className="cube-face cube-back" style={{ width: size, height: size }}>
